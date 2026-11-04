@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#74BCF6"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="254dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginBottom="67dp"
+        android:background="#2EA4FD"
+        android:backgroundTint="#2EA4FD"
+        android:gravity="center"
+        android:text="Counter App"
+        android:textColor="#06759E"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCount"
+        android:layout_width="232dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="67dp"
+        android:gravity="center"
+        android:text="99"
+        android:textColor="#DCD4D4"
+        android:textSize="180sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnCount"
+        android:layout_width="161dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="84dp"
+        android:text="Count"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCount" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="96dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#9A05B4"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCount" />
+</androidx.constraintlayout.widget.ConstraintLayout>
