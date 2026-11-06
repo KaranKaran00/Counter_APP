@@ -1,6 +1,11 @@
 package com.example.app1;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -19,6 +24,38 @@ public class FuelExtimateApp extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // 1 create object
+        Button btnCost;
+        EditText txtDist;
+        EditText txtEffc;
+        EditText txtPrice;
+        TextView txtCost;
+
+        //2 bind UI to java Object
+        btnCost = findViewById(R.id.btnCost);
+        txtCost = findViewById(R.id.txtFuelCost);
+
+        txtDist = findViewById(R.id.txtDist);
+        txtEffc = findViewById(R.id.txtEffc);
+        txtPrice= findViewById(R.id.txtPrice);
+
+        btnCost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String dist = txtDist.getText().toString();
+                String effc = txtEffc.getText().toString();
+                String price = txtPrice.getText().toString();
+
+                int d = Integer.getInteger(dist);
+                int e = Integer.getInteger(effc);
+                int p = Integer.getInteger(price);
+
+                int ans = (d/e) * p;
+
+                txtCost.setText(""+ ans + "PRK");
+            }
         });
     }
 }
