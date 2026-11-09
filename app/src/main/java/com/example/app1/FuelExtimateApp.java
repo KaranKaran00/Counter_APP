@@ -48,13 +48,13 @@ public class FuelExtimateApp extends AppCompatActivity {
                 String effc = txtEffc.getText().toString();
                 String price = txtPrice.getText().toString();
 
-                int d = Integer.getInteger(dist);
-                int e = Integer.getInteger(effc);
-                int p = Integer.getInteger(price);
+                int d = Integer.parseInt(dist);
+                int e = Integer.parseInt(effc);
+                int p = Integer.parseInt(price);
 
                 int ans = (d/e) * p;
 
-                txtCost.setText(""+ ans + "PRK");
+                txtCost.setText(""+ ans + " PRK");
             }
         });
     }

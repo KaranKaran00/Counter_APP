@@ -1,5 +1,6 @@
 package com.example.app1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,10 +32,15 @@ public class MainActivity extends AppCompatActivity {
         TextView txtCount;
         Button btnReset;
 
+        Button btnFuelAPP,btnUserAPP;
+
         //2 bind UI with Java object
         btnCount = findViewById(R.id.btnCount);
         txtCount = findViewById(R.id.txtCount);
         btnReset = findViewById(R.id.btnReset);
+
+        btnFuelAPP = findViewById(R.id.btnFuelApp);
+        btnUserAPP = findViewById(R.id.btnUserAPP);
 
         //3 onclick Listener
         btnCount.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +56,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 count = 0;
                 txtCount.setText(""+ count);
+            }
+        });
+
+        btnUserAPP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, form.class);
+
+                startActivity(i);
+            }
+        });
+
+        btnFuelAPP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, FuelExtimateApp.class);
+
+                startActivity(i);
             }
         });
     }
